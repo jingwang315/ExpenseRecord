@@ -1,11 +1,10 @@
+using System.ComponentModel.DataAnnotations;
 namespace ExpenseRecord.Models
 {
-    public class ExpenseRecord
+    public class ExpenseRecordClass
     {
-        [BsonId]
-        public string Id { get; set; } = Guid.NewGuid().ToString();
-
-        public string Description { get; set; } = string.Empty;
+        public string Id { get; set; } 
+        public string Description { get; set; }
 
         public string Type { get; set; }
 

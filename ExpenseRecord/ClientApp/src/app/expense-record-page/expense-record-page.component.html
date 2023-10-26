@@ -1,0 +1,19 @@
+<p>Expense Records</p> 
+<div class="addhere">
+    <p>Description:</p>
+    <input name="Description" [(ngModel)]="clicked_item.Description">
+    <p>Description:</p>
+    <input name="Type" [(ngModel)]="clicked_item.Type">
+    <p>Description:</p>
+    <input name="Amount" [(ngModel)]="clicked_item.Amount">
+    <p>Description:</p>
+    <input name="Date" [(ngModel)]="clicked_item.Date">
+</div>
+<div class="records">
+    <div *ngFor="let record of records">
+        <a> {{record.Description}}</a>
+        <a> {{record.Type}}</a>
+        <a> {{record.Amount}}</a>
+        <a> {{record.Date}}</a>
+    </div>
+</div>
