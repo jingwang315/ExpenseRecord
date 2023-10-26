@@ -1,7 +1,7 @@
 export interface Record {
-    Id: string;
-    Description: string;
-    Type: string;
-    Amount: number;
-    Date: string;
+    id: string;
+    description: string;
+    type: string;
+    amount: number;
+    date: string;
   }

@@ -30,11 +30,11 @@ export class HttpService {
   insertItems(record:Record){
     
     const createdItem: Record = {
-      Id: record.Id,
-      Description: record.Description, 
-      Type: record.Type,
-      Amount: record.Amount,
-      Date: record.Date,
+      id: record.id,
+      description: record.description, 
+      type: record.type,
+      amount: record.amount,
+      date: record.date,
     }
 
     return this.http.post<Record>(this.itemsUrl,createdItem);

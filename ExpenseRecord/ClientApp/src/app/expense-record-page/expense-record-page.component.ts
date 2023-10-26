@@ -9,7 +9,7 @@ import { HttpService } from '../http.service';
 })
 export class ExpenseRecordPageComponent implements OnInit {
 
-  clicked_item: Record = {Id:'', Description:'', Type:'', Amount:0, Date:''};
+  clicked_item: Record = {id:'', description:'', type:'', amount:0, date:''};
   records: Record[] = [];
   recordsDisplay:any[] = [];
 
