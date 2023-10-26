@@ -1,19 +1,25 @@
-<p>Expense Records</p> 
+<h1>Expense Records</h1> 
 <div class="addhere">
+    <h2>Add New Record Here: </h2>
     <p>Description:</p>
-    <input name="Description" [(ngModel)]="clicked_item.Description">
-    <p>Description:</p>
-    <input name="Type" [(ngModel)]="clicked_item.Type">
-    <p>Description:</p>
-    <input name="Amount" [(ngModel)]="clicked_item.Amount">
-    <p>Description:</p>
-    <input name="Date" [(ngModel)]="clicked_item.Date">
+    <input type="text" name="Description" [(ngModel)]="clicked_item.Description" placeholder="Description">
+    <p>Type:</p>
+    <input type="text" name="Type" [(ngModel)]="clicked_item.Type" placeholder="Type">
+    <p>Amount:</p>
+    <input type="text" name="Amount" [(ngModel)]="clicked_item.Amount" placeholder="Amount">
+    <p>Date:</p>
+    <input type="text" name="Date" [(ngModel)]="clicked_item.Date" placeholder="Date">
+
+    <button id="savebutton" (click)="save()" routerLink = "">Save</button>
 </div>
+<h2>All Records: </h2>
 <div class="records">
     <div *ngFor="let record of records">
         <a> {{record.Description}}</a>
         <a> {{record.Type}}</a>
         <a> {{record.Amount}}</a>
         <a> {{record.Date}}</a>
+        <button id="deletebutton" (click)="delete(record.Id)">Delete</button>
+        <hr>
     </div>
 </div>

@@ -21,7 +21,8 @@ namespace ExpenseRecord.Controllers
         [HttpGet]
         public List<ExpenseRecordClass> Get()
         {
-            return _expenseRecords;
+            var displayList = _expenseRecords.OrderByDescending(o => o.Id).ToList();
+            return displayList;
         }
 
         [HttpGet("{Id}")]

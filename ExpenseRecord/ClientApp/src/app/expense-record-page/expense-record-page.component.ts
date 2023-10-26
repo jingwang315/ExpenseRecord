@@ -9,11 +9,9 @@ import { HttpService } from '../http.service';
 })
 export class ExpenseRecordPageComponent implements OnInit {
 
-  clicked_item: Record = {Id:"", Description:'', Type:'', Amount:0, Date:''};
+  clicked_item: Record = {Id:'', Description:'', Type:'', Amount:0, Date:''};
   records: Record[] = [];
   recordsDisplay:any[] = [];
-  id: string = '';
-  searchtext: string = '';
 
   constructor(private service: HttpService) {
   }
@@ -40,9 +38,9 @@ export class ExpenseRecordPageComponent implements OnInit {
 
   };
 
-    delete(): void{
-    console.log(this.id);
-    this.service.deleteItems(this.id).subscribe();
+    delete(id: string): void{
+    console.log(id);
+    this.service.deleteItems(id).subscribe();
     console.log("deleted");
   }
 

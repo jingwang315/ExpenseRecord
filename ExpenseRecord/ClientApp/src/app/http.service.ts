@@ -12,7 +12,7 @@ import { Record } from './record';
 @Injectable({ providedIn: 'root' })
 export class HttpService {
 
-  private itemsUrl = '/api/ExpenseRecord';  // URL to web api
+  private itemsUrl = 'https://localhost:7081/api/ExpenseRecord'; // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -24,7 +24,7 @@ export class HttpService {
     ) { }
 
   getItems(): Observable<Record[]> {
-    return this.http.get<Record[]>('/api/ExpenseRecord');
+    return this.http.get<Record[]>(this.itemsUrl);
   }
 
   insertItems(record:Record){
