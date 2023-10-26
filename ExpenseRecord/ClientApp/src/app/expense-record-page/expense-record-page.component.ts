@@ -34,13 +34,13 @@ export class ExpenseRecordPageComponent implements OnInit {
 
   save():void {
 
-    this.service.insertItems(this.clicked_item).subscribe();
+    this.service.insertItems(this.clicked_item).subscribe(()=>location.reload());
 
   };
 
     delete(id: string): void{
     console.log(id);
-    this.service.deleteItems(id).subscribe();
+    this.service.deleteItems(id).subscribe(()=>location.reload());
     console.log("deleted");
   }
 
